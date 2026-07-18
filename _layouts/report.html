@@ -1,0 +1,18 @@
+---
+layout: default
+---
+<article class="report">
+  <header class="report-hero">
+    <p class="eyebrow">LEAGUE META REPORT</p>
+    <h1>{{ page.new_league | escape }} <span>{{ page.new_timemachine | escape }}</span></h1>
+    <p class="comparison-label">
+      {{ page.old_league | escape }} {{ page.old_timemachine | escape }}
+      <span aria-hidden="true">→</span>
+      {{ page.new_league | escape }} {{ page.new_timemachine | escape }}
+    </p>
+    <p class="updated">更新: {{ page.updated_at | date: "%Y-%m-%d %H:%M UTC" }}</p>
+  </header>
+  <div class="report-content">
+    {{ content }}
+  </div>
+</article>

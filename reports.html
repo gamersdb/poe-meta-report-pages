@@ -1,0 +1,24 @@
+---
+layout: default
+title: レポート一覧
+permalink: /reports/
+---
+{% assign reports = site.reports | sort: "updated_at" | reverse %}
+<section class="archive">
+  <p class="eyebrow">ARCHIVE</p>
+  <h1>レポート一覧</h1>
+  {% if reports.size > 0 %}
+    <div class="report-list">
+      {% for report in reports %}
+        <a class="report-card" href="{{ report.url | relative_url }}">
+          <span class="report-card-title">{{ report.new_league | escape }}</span>
+          <span class="report-card-time">{{ report.new_timemachine | escape }}</span>
+          <span class="report-card-route">{{ report.old_league | escape }} → {{ report.new_league | escape }}</span>
+          <time datetime="{{ report.updated_at | date_to_xmlschema }}">{{ report.updated_at | date: "%Y-%m-%d" }}</time>
+        </a>
+      {% endfor %}
+    </div>
+  {% else %}
+    <p>公開済みのレポートはありません。</p>
+  {% endif %}
+</section>

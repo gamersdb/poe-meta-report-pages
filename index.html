@@ -1,0 +1,27 @@
+---
+layout: default
+title: 最新レポート
+---
+{% assign reports = site.reports | sort: "updated_at" | reverse %}
+{% assign latest = reports | first %}
+{% if latest %}
+  <section class="latest-intro">
+    <p class="eyebrow">LATEST REPORT</p>
+    <h1>最新のメタを読む</h1>
+    <p>{{ latest.old_league | escape }}から{{ latest.new_league | escape }}への変化を比較します。</p>
+    <a class="primary-link" href="{{ latest.url | relative_url }}">個別ページを開く</a>
+  </section>
+  <article class="report report-embedded">
+    <header class="report-hero">
+      <h2>{{ latest.new_league | escape }} <span>{{ latest.new_timemachine | escape }}</span></h2>
+      <p class="comparison-label">{{ latest.old_league | escape }} {{ latest.old_timemachine | escape }} → {{ latest.new_league | escape }} {{ latest.new_timemachine | escape }}</p>
+    </header>
+    <div class="report-content">{{ latest.content }}</div>
+  </article>
+{% else %}
+  <section class="empty-state">
+    <p class="eyebrow">POE META REPORT</p>
+    <h1>最初のレポートを準備中です</h1>
+    <p>公開されたレポートは、ここに表示されます。</p>
+  </section>
+{% endif %}

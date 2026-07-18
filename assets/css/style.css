@@ -1,0 +1,75 @@
+:root {
+  color-scheme: dark;
+  --bg: #100e0c;
+  --panel: #191510;
+  --panel-light: #241d16;
+  --line: #493a29;
+  --gold: #c8a35c;
+  --gold-light: #ead49d;
+  --text: #e7dfd1;
+  --muted: #a69b89;
+  --danger: #9e5745;
+  font-family: Georgia, "Times New Roman", "Yu Mincho", serif;
+}
+
+* { box-sizing: border-box; }
+html { background: var(--bg); }
+body {
+  margin: 0;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 50% -20%, #3b2b1a 0, transparent 42rem),
+    linear-gradient(180deg, #17130f 0, var(--bg) 32rem);
+  line-height: 1.7;
+}
+a { color: var(--gold-light); }
+.site-header, .site-footer, .site-main { width: min(1180px, calc(100% - 32px)); margin-inline: auto; }
+.site-header {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+}
+.brand { display: flex; gap: 10px; align-items: center; color: var(--text); text-decoration: none; font-weight: 700; letter-spacing: .04em; }
+.brand-mark { color: var(--gold); font-size: .75em; transform: rotate(45deg); }
+nav { display: flex; gap: 22px; }
+nav a { color: var(--muted); text-decoration: none; font-size: .92rem; }
+nav a:hover { color: var(--gold-light); }
+.site-main { padding-block: 54px 90px; }
+.site-footer { padding: 24px 0 40px; border-top: 1px solid var(--line); color: var(--muted); font-size: .82rem; }
+.eyebrow { margin: 0 0 8px; color: var(--gold); font: 700 .76rem/1.4 system-ui, sans-serif; letter-spacing: .22em; }
+.latest-intro, .empty-state, .archive { margin: 36px 0 60px; }
+.latest-intro h1, .empty-state h1, .archive h1 { margin: 0 0 12px; font-size: clamp(2.1rem, 6vw, 4.8rem); line-height: 1.05; font-weight: 500; }
+.primary-link { display: inline-block; margin-top: 10px; padding: 10px 16px; border: 1px solid var(--gold); text-decoration: none; }
+.report { border: 1px solid var(--line); background: color-mix(in srgb, var(--panel) 94%, transparent); box-shadow: 0 24px 70px #0006; }
+.report-hero { padding: clamp(24px, 5vw, 52px); border-bottom: 1px solid var(--line); background: linear-gradient(135deg, #2b2117, #17130f); }
+.report-hero h1, .report-hero h2 { margin: 0; font-size: clamp(2rem, 6vw, 4.5rem); line-height: 1; font-weight: 500; }
+.report-hero h1 span, .report-hero h2 span { color: var(--gold); font-size: .5em; }
+.comparison-label { color: var(--muted); font-family: system-ui, sans-serif; }
+.comparison-label span { margin-inline: .6em; color: var(--gold); }
+.updated { margin-bottom: 0; color: var(--muted); font-size: .8rem; }
+.report-content { padding: clamp(20px, 5vw, 52px); }
+.report-content > h1:first-child { display: none; }
+.report-content h2 { margin-top: 2.5em; padding-bottom: .35em; border-bottom: 1px solid var(--line); color: var(--gold-light); font-weight: 500; }
+.ranking-comparison { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.ranking-old, .ranking-new { min-width: 0; overflow-x: auto; padding: 6px 16px 18px; background: var(--panel-light); border-top: 2px solid var(--gold); }
+table { width: 100%; min-width: 480px; border-collapse: collapse; font-family: system-ui, sans-serif; font-size: .86rem; }
+th, td { padding: 10px 9px; border-bottom: 1px solid var(--line); text-align: left; }
+th { color: var(--gold-light); font-size: .74rem; letter-spacing: .04em; }
+tbody tr:hover { background: #ffffff08; }
+.report-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 16px; }
+.report-card { display: grid; grid-template-columns: 1fr auto; gap: 5px 12px; padding: 20px; border: 1px solid var(--line); background: var(--panel); text-decoration: none; }
+.report-card:hover { border-color: var(--gold); transform: translateY(-2px); }
+.report-card-title { color: var(--text); font-size: 1.35rem; }
+.report-card-time { color: var(--gold); }
+.report-card-route, .report-card time { color: var(--muted); font: .78rem system-ui, sans-serif; }
+
+@media (max-width: 760px) {
+  .site-header { align-items: flex-start; padding-block: 18px; gap: 16px; }
+  .brand { max-width: 150px; }
+  nav { gap: 14px; }
+  .site-main { padding-top: 28px; }
+  .ranking-comparison { grid-template-columns: 1fr; }
+  .report-content { padding-inline: 14px; }
+}
