@@ -52,6 +52,26 @@ nav a:hover { color: var(--gold-light); }
 .report-content { padding: clamp(20px, 5vw, 52px); }
 .report-content > h1:first-child { display: none; }
 .report-content h2 { margin-top: 2.5em; padding-bottom: .35em; border-bottom: 1px solid var(--line); color: var(--gold-light); font-weight: 500; }
+.reference-links {
+  margin: 1.5em 0;
+  border: 1px solid var(--line);
+  background: var(--panel-light);
+}
+.reference-links summary {
+  padding: 10px 14px;
+  color: var(--gold-light);
+  cursor: pointer;
+  font: 600 .86rem/1.5 system-ui, sans-serif;
+}
+.reference-links summary:hover { background: #ffffff08; }
+.reference-links summary:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+.reference-links[open] summary { border-bottom: 1px solid var(--line); }
+.reference-links ul {
+  margin: 0;
+  padding: 12px 18px 14px 38px;
+  overflow-wrap: anywhere;
+}
+.reference-links li + li { margin-top: .45em; }
 .ranking-comparison { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
 .ranking-old, .ranking-new { min-width: 0; overflow-x: auto; padding: 6px 16px 18px; background: var(--panel-light); border-top: 2px solid var(--gold); }
 table { width: 100%; min-width: 480px; border-collapse: collapse; font-family: system-ui, sans-serif; font-size: .86rem; }
