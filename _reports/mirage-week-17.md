@@ -1,15 +1,16 @@
 ---
 layout: report
-title: Mirage week-17 メタレポート
+title: PoE 1 Mirage week-17 ビルドメタレポート
+description: Path of Exile 1 Mirageリーグweek-17のビルド使用率ランキング。Keepers week-17と比較し、注目の新ビルドと人気低下ビルドを解説します。
 old_league: Keepers
 old_timemachine: week-17
 new_league: Mirage
 new_timemachine: week-17
+date: '2026-07-19T10:37:03Z'
+last_modified_at: '2026-07-19T10:37:03Z'
 updated_at: '2026-07-19T10:37:03Z'
 permalink: "/reports/mirage/week-17/"
 ---
-
-# メタレポート
 
 ## ランキング比較
 

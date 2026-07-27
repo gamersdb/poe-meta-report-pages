@@ -2,6 +2,8 @@
 
 Path of Exile 1のリーグ別ビルドメタレポートを公開するGitHub Pagesサイトです。
 
+[公開サイト](https://gamersdb.github.io/poe-meta-report-pages/)
+
 ## ローカル確認
 
 ```bash

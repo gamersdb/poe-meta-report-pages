@@ -2,9 +2,13 @@ title: PoE Meta Report
 description: Path of Exile 1 のリーグ別ビルドメタレポート
 url: https://gamersdb.github.io
 baseurl: /poe-meta-report-pages
+author: gamersdb
 lang: ja
 timezone: Asia/Tokyo
 markdown: kramdown
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
 kramdown:
   input: GFM
 collections:

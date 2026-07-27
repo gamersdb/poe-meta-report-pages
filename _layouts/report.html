@@ -10,7 +10,8 @@ layout: default
       <span aria-hidden="true">→</span>
       {{ page.new_league | escape }} {{ page.new_timemachine | escape }}
     </p>
-    <p class="updated">更新: {{ page.updated_at | date: "%Y-%m-%d %H:%M UTC" }}</p>
+    <p>Path of Exile 1のビルド使用率をpoe.ninjaから集計し、同じ時点のリーグ間で比較します。</p>
+    <p class="updated">更新: <time datetime="{{ page.updated_at | date_to_xmlschema }}">{{ page.updated_at | date: "%Y-%m-%d %H:%M UTC" }}</time></p>
   </header>
   <div class="report-content">
     {{ content }}
