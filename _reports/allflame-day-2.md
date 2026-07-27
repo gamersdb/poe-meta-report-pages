@@ -1,15 +1,16 @@
 ---
 layout: report
-title: Allflame day-2 メタレポート
+title: PoE 1 Allflame day-2 ビルドメタレポート
+description: Path of Exile 1 Allflameリーグday-2のビルド使用率ランキング。Mirage day-2と比較し、注目の新ビルドと人気低下ビルドを解説します。
 old_league: Mirage
 old_timemachine: day-2
 new_league: Allflame
 new_timemachine: day-2
+date: '2026-07-27T05:00:00Z'
+last_modified_at: '2026-07-27T05:00:00Z'
 updated_at: '2026-07-27T05:00:00Z'
 permalink: "/reports/allflame/day-2/"
 ---
-
-# メタレポート
 
 ## ランキング比較
 
