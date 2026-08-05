@@ -1,15 +1,16 @@
 ---
 layout: default
-title: 最新レポート
-description: Path of Exile 1の最新ビルド使用率ランキングと、前リーグから人気が上昇・低下したビルドを紹介します。
+title: PoE 1 最新ビルドメタ・使用率ランキング
+description: Path of Exile 1の最新リーグにおけるビルド使用率ランキングを掲載。前リーグとの比較から、人気が上昇・低下したスキルとアスセンダンシーを解説します。
 ---
 {% assign reports = site.reports | sort: "updated_at" | reverse %}
 {% assign latest = reports | first %}
 {% if latest %}
   <section class="latest-intro">
     <p class="eyebrow">LATEST REPORT</p>
-    <h1>最新のメタを読む</h1>
+    <h1>PoE 1 最新ビルドメタ・使用率ランキング</h1>
     <p>{{ latest.old_league | escape }}から{{ latest.new_league | escape }}への変化を比較します。</p>
+    <p class="updated">更新: <time datetime="{{ latest.updated_at | date_to_xmlschema }}">{{ latest.updated_at | date: "%Y-%m-%d %H:%M UTC" }}</time></p>
     <a class="primary-link" href="{{ latest.url | relative_url }}">個別ページを開く</a>
   </section>
   <article class="report report-embedded">

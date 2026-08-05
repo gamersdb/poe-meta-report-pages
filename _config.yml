@@ -17,6 +17,16 @@ collections:
 defaults:
   - scope:
       path: ""
+    values:
+      indexable: false
+      sitemap: false
+  - scope:
+      path: "index.html"
+    values:
+      indexable: true
+      sitemap: true
+  - scope:
+      path: ""
       type: reports
     values:
       layout: report
@@ -25,3 +35,4 @@ exclude:
   - Gemfile.lock
   - README.md
   - script
+  - vendor

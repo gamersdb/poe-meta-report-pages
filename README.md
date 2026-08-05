@@ -12,3 +12,12 @@ bundle exec jekyll serve
 ```
 
 レポートは生成側の `poe-meta-report2` から `_reports/` へ追加します。GitHub Pagesの公開元は、リポジトリ設定で **GitHub Actions** を選択してください。
+
+## SEO検証
+
+検索インデックスはトップページだけを対象にし、個別レポートなどは `noindex,follow` として公開します。生成物の設定と内部リンクは次のコマンドで検証できます。
+
+```bash
+bundle exec jekyll build
+ruby script/verify_seo.rb _site
+```
